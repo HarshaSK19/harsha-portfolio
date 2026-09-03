@@ -156,7 +156,7 @@ export default function Home() {
         <nav className="navbar">
           <a href="#home" className="logo" onClick={() => setMenuOpen(false)}>
             <img
-              src="/logos/profile.png"
+              src="/logos/profile.PNG"
               alt="Harsha SK"
               className="navbar-profile"
             />
