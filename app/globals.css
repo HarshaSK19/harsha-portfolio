@@ -6834,3 +6834,24 @@ padding: 34px;
     gap: 10px !important;
   }
 }
+
+/* MOBILE — CONTACT BUTTON SIZE */
+@media (max-width: 768px) {
+  .contact-button {
+    width: 280px !important;
+    height: 56px !important;
+    padding: 0 20px !important;
+    font-size: 15px !important;
+    border-radius: 999px !important;
+  }
+}
+
+/* CONTACT — SOCIAL ARROWS */
+.social-arrow {
+  font-size: 12px !important;
+  line-height: 1 !important;
+  margin-left: 3px !important;
+  font-family: Arial, sans-serif !important;
+  display: inline-block !important;
+  transform: translateY(-1px);
+}

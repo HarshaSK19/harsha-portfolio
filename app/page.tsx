@@ -179,7 +179,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="github-button"
           >
-            GitHub ↗
+           GitHub <span className="social-arrow">↗</span>
           </a>
 
           <button
@@ -230,7 +230,7 @@ export default function Home() {
 
             <p className="hero-description">
   I build practical AI solutions focused on
-  <strong>Artificial Intelligence</strong>,
+  <strong> Artificial Intelligence</strong>,
   <strong>Machine Learning</strong>,
   <strong>Data Science</strong>,
   <strong>Computer Vision</strong> and
@@ -255,7 +255,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub ↗
+                GitHub <span className="social-arrow">↗</span>
               </a>
 
               <span>•</span>
@@ -265,7 +265,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn ↗
+                LinkedIn <span className="social-arrow">↗</span>
               </a>
 
               <span>•</span>
@@ -890,7 +890,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub ↗
+            GitHub <span className="social-arrow">↗</span>
           </a>
 
           <a
@@ -898,11 +898,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn <span className="social-arrow">↗</span>
           </a>
 
          <a href="mailto:mail2harshask@gmail.com">
-  Email ↗
+  Email <span className="social-arrow">↗</span>
 </a>
         </div>
       </section>
