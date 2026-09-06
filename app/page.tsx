@@ -5,11 +5,8 @@ import BrainIcon from "@/components/BrainIcon";
 import HandTrackingVisual from "@/components/HandTrackingVisual";
 
 const roles = [
-  "AI / ML Enthusiast",
-  "Data Science Enthusiast",
-  "RAG Developer",
-  "Computer Vision Enthusiast",
-  "Python Developer",
+  "Full Stack Developer",
+  "Generative AI Developer"
 ];
 
 const interfaceSkills = [
@@ -228,13 +225,8 @@ export default function Home() {
               <span className="cursor">|</span>
             </div>
 
-            <p className="hero-description">
-  I build practical AI solutions focused on
-  <strong> Artificial Intelligence</strong>,
-  <strong>Machine Learning</strong>,
-  <strong>Data Science</strong>,
-  <strong>Computer Vision</strong> and
-   <strong> Retrieval-Augmented Generation</strong>.
+  <p className="hero-description">
+  I build scalable web applications and AI-powered products that turn ideas into real, usable experiences.
 </p>
 
             <div className="hero-buttons">
@@ -370,28 +362,27 @@ export default function Home() {
           <div>
             <p className="eyebrow">WHO I AM</p>
 
-            <h2>
-              Building with
-              <br />
-              <span>intelligent systems.</span>
-            </h2>
+           <h2>
+  Learning through
+  <br />
+  <span>building.</span>
+</h2>
           </div>
 
           <div className="about-text">
             <p>
-  I build practical intelligent systems that turn ideas into
-  useful, real-world applications.
+  I build full-stack applications and AI-powered systems that 
+  turn complex ideas into practical, reliable products.
 </p>
 
 <p>
-  My work focuses on Artificial Intelligence, Machine Learning,
-  Data Science, Computer Vision and Retrieval-Augmented
-  Generation.
+ My work combines software development with Generative AI, with hands-on experience in 
+ LLM applications, Retrieval-Augmented Generation, and data-driven systems
 </p>
 
 <p>
-  I learn by building — experimenting with ideas, solving
-  problems and continuously improving through hands-on projects.
+ I’m focused on learning through real projects, solving problems hands-on, and turning 
+ what I learn into better, more practical solutions.
 </p>
           </div>
         </div>
@@ -405,11 +396,11 @@ export default function Home() {
         <div className="section-number">
           02 / EDUCATION
         </div>
-
+        <div className="section-divider" />
         <div className="education-heading">
 
           <h2>
-            My <span>education.</span>
+            My <span>Education.</span>
           </h2>
 
         </div>
@@ -417,48 +408,49 @@ export default function Home() {
 
         <div className="education-timeline">
 
+
           {/* DEGREE */}
 
-          <div className="education-item education-left">
+<div className="education-item education-left">
 
-           <div className="education-logo education-logo-right">
-  <img
-    src="/logos/cbit.png"
-    alt="CBIT logo"
-  />
+  <div className="education-logo education-logo-right">
+    <img
+      src="/logos/cbit.png"
+      alt="CBIT logo"
+    />
+  </div>
+
+  <div className="education-card">
+
+    <div className="education-badge">
+      DEGREE
+    </div>
+
+    <h3>
+      B.E. in Computer Science & Engineering
+      <br />
+    
+    </h3>
+
+    <p className="education-institute">
+      C. Byregowda Institute of Technology, Kolar
+    </p>
+
+    <p className="education-year">
+      2023 – 2027
+    </p>
+
+    <div className="education-tags">
+      <span>Data Structures & Algorithms</span>
+      <span>Machine Learning</span>
+      <span>Deep Learning</span>
+      <span>Data Science</span>
+      <span>Database Systems</span>
+    </div>
+
+  </div>
+
 </div>
-
-            <div className="education-card">
-
-              <div className="education-badge">
-                DEGREE
-              </div>
-
-              <h3>
-                Bachelor of Engineering in
-                <br />
-                Computer Science & Engineering
-              </h3>
-
-              <p className="education-institute">
-                C. Byregowda Institute of Technology, Kolar
-              </p>
-
-              <p className="education-year">
-                2023 – 2027
-              </p>
-
-              <div className="education-tags">
-                <span>Data Structures & Algorithms</span>
-                <span>Machine Learning</span>
-                <span>Deep Learning</span>
-                <span>Data Science</span>
-                <span>Database Systems</span>
-              </div>
-
-            </div>
-
-          </div>
 
 
           {/* COLLEGE */}
@@ -510,7 +502,7 @@ export default function Home() {
   <div className="experience-heading">
 
     <h2>
-      Where I've <span>contributed.</span>
+      Where I've <span>Contributed.</span>
     </h2>
 
   </div>
@@ -518,28 +510,9 @@ export default function Home() {
 
   <div className="experience-list">
 
-    {/* EXPERIENCE 01 */}
+   {/* EXPERIENCE 01 */}
 
-  <div
-  className="experience-card"
-  onMouseMove={(e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-
-    e.currentTarget.style.setProperty(
-      "--mouse-x",
-      `${e.clientX - rect.left}px`
-    );
-
-    e.currentTarget.style.setProperty(
-      "--mouse-y",
-      `${e.clientY - rect.top}px`
-    );
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.setProperty("--mouse-x", "50%");
-    e.currentTarget.style.setProperty("--mouse-y", "50%");
-  }}
->
+<div className="experience-card">
 
   <div className="experience-number">
     01
@@ -550,7 +523,7 @@ export default function Home() {
   </div>
 
   <h3>
-    Vice President
+    Media & Design Head
   </h3>
 
   <p className="experience-company">
@@ -560,10 +533,6 @@ export default function Home() {
   <p className="experience-date">
     Aug 2023 – Present
   </p>
-
-  <h4 className="experience-role">
-    Media & Design Head
-  </h4>
 
   <ul className="experience-points">
 
@@ -594,19 +563,21 @@ export default function Home() {
 </div>
 </div> 
 </section>
-      {/* WORK */}
-      <section id="work" className="section work-section">
-        <div className="section-number">
-          04 / PROJECTS
-        </div>
+   {/* WORK */}
+<section id="work" className="section work-section">
+  <div className="section-number">
+    04 / PROJECTS
+  </div>
 
-        <div className="section-heading">
-          <h2>
-            Things I'm <span>building.</span>
-          </h2>
-        </div>
+  <div className="section-divider" />
 
-        <div className="projects">
+  <div className="section-heading">
+    <h2>
+      Featured<span> Projects.</span>
+    </h2>
+  </div>
+
+  <div className="projects">
           {/* PROJECT 1 */}
           <article
             className="project-card"
@@ -732,7 +703,7 @@ export default function Home() {
 
   <div className="building-badge">
     <span></span>
-    CURRENTLY BUILDING
+    COMING SOON
   </div>
 
   <div className="project-visual rag-visual">
@@ -758,8 +729,7 @@ export default function Home() {
 </div>
 
 </section>
-     {/* =========================================
-    SKILLS
+    {/* SKILLS
 ========================================= */}
 
 <section id="skills" className="skills-section">
@@ -767,6 +737,8 @@ export default function Home() {
   <div className="section-number">
     05 / SKILLS
   </div>
+
+  <div className="section-divider" />
 
   <div className="skills-heading">
 
@@ -778,7 +750,6 @@ export default function Home() {
     </h2>
 
   </div>
-
 
   {/* CRAFTING INTERFACES */}
 
@@ -855,17 +826,18 @@ export default function Home() {
 
 </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="section contact-section">
-        <div className="section-number">
-          06 / CONTACT
-        </div>
+  {/* CONTACT */}
+<section id="contact" className="section contact-section">
 
-        <p className="eyebrow">
-          <span></span>
-          GET IN TOUCH
-          <span></span>
-        </p>
+  <div className="section-number">
+    06 / CONTACT
+  </div>
+
+  <p className="eyebrow">
+    <span></span>
+    GET IN TOUCH
+    <span></span>
+  </p>
 
         <h2>
           Let's build something
@@ -945,3 +917,4 @@ function SkillNode({
     </div>
   );
 }
+

@@ -771,14 +771,41 @@ a {
 }
 
 .scroll-indicator span {
+
   width: 55px;
+
   height: 1px;
 
   background: linear-gradient(
+
     90deg,
+
     var(--cyan),
+
     transparent
+
   );
+
+}
+
+.scroll-indicator::before {
+
+  content: "";
+
+  width: 55px;
+
+  height: 1px;
+
+  background: linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    var(--cyan)
+
+  );
+
 }
 
 /* =========================================
@@ -3093,18 +3120,18 @@ padding: 34px;
 }
 
 /* =========================================
-   EDUCATION
+   EDUCATION — CONSOLIDATED
 ========================================= */
 
 .education-section {
+  padding: 100px 6vw 50px;
   position: relative;
-  padding: 140px 6vw;
   overflow: hidden;
 }
 
 .education-heading {
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 35px;
 }
 
 .education-heading .eyebrow {
@@ -3125,489 +3152,6 @@ padding: 34px;
     #5db8ff,
     #9270ff
   );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* =========================================
-   TIMELINE
-========================================= */
-
-.education-timeline {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  position: relative;
-  padding: 20px 0 60px;
-}
-
-/* CENTER LINE */
-
-.education-timeline::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  bottom: 0;
-
-  left: 50%;
-
-  width: 2px;
-
-  transform: translateX(-50%);
-
-  background: linear-gradient(
-    to bottom,
-    #7c4dff,
-    #00e5ff,
-    #7c4dff
-  );
-
-  box-shadow:
-    0 0 12px rgba(0, 229, 255, 0.5),
-    0 0 30px rgba(124, 77, 255, 0.25);
-}
-
-/* =========================================
-   EDUCATION ITEM
-========================================= */
-
-.education-item {
-  width: 50%;
-  position: relative;
-  margin-bottom: 110px;
-
-  display: flex;
-}
-
-/* LEFT CARD */
-
-.education-left {
-  justify-content: flex-end;
-  padding-right: 55px;
-}
-
-/* RIGHT CARD */
-
-.education-right {
-  margin-left: 50%;
-  justify-content: flex-start;
-  padding-left: 55px;
-}
-
-/* =========================================
-   TIMELINE DOT
-========================================= */
-
-.education-dot {
-  position: absolute;
-
-  top: 32px;
-
-  width: 22px;
-  height: 22px;
-
-  border-radius: 50%;
-
-  background: #080b17;
-
-  border: 3px solid #00e5ff;
-
-  box-shadow:
-    0 0 10px rgba(0, 229, 255, 0.9),
-    0 0 25px rgba(0, 229, 255, 0.4);
-
-  z-index: 5;
-}
-
-.education-left .education-dot {
-  right: -11px;
-}
-
-.education-right .education-dot {
-  left: -11px;
-}
-
-/* =========================================
-   EDUCATION CARD
-========================================= */
-
-.education-card {
-  position: relative;
-
-  width: min(520px, 100%);
-
-  padding: 38px 42px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(18, 20, 34, 0.97),
-      rgba(9, 11, 23, 0.97)
-    );
-
-  border: 1px solid rgba(255, 255, 255, 0.14);
-
-  border-radius: 20px;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.35);
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(85, 230, 209, 0.5);
-
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.45),
-    0 0 30px rgba(85, 230, 209, 0.08);
-}
-
-/* =========================================
-   CARD ARROWS
-========================================= */
-
-.education-left .education-card::after {
-  content: "";
-
-  position: absolute;
-
-  right: -11px;
-  top: 27px;
-
-  width: 20px;
-  height: 20px;
-
-  background: #101220;
-
-  border-top: 1px solid rgba(85, 230, 209, 0.5);
-  border-right: 1px solid rgba(85, 230, 209, 0.5);
-
-  transform: rotate(45deg);
-}
-
-.education-right .education-card::before {
-  content: "";
-
-  position: absolute;
-
-  left: -11px;
-  top: 27px;
-
-  width: 20px;
-  height: 20px;
-
-  background: #101220;
-
-  border-left: 1px solid rgba(85, 230, 209, 0.5);
-  border-bottom: 1px solid rgba(85, 230, 209, 0.5);
-
-  transform: rotate(45deg);
-}
-
-/* =========================================
-   BADGE
-========================================= */
-
-.education-badge {
-  display: inline-flex;
-
-  padding: 9px 18px;
-
-  border-radius: 999px;
-
-  color: #00e5ff;
-
-  background: rgba(0, 229, 255, 0.06);
-
-  box-shadow:
-    0 0 20px rgba(0, 229, 255, 0.08);
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  letter-spacing: 0.05em;
-
-  margin-bottom: 25px;
-}
-
-/* =========================================
-   TITLE
-========================================= */
-
-.education-card h3 {
-  margin: 0 0 18px;
-
-  font-size: clamp(25px, 2.5vw, 35px);
-
-  line-height: 1.15;
-
-  font-weight: 600;
-
-  letter-spacing: -0.025em;
-}
-
-/* =========================================
-   COLLEGE NAME
-========================================= */
-
-.education-institute {
-  margin: 0 0 15px;
-
-  color: #9299ad;
-
-  font-size: 18px;
-
-  line-height: 1.5;
-}
-
-/* =========================================
-   YEAR
-========================================= */
-
-.education-year {
-  margin: 0;
-
-  color: #00e5ff;
-
-  font-size: 17px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.05em;
-}
-
-/* Education logos */
-
-/* EDUCATION LOGOS */
-
-/* =========================================
-   EDUCATION LOGOS
-========================================= */
-
-.education-logo {
-  position: absolute;
-
-  top: 42px;
-
-  width: 78px !important;
-  height: 78px !important;
-
-  border-radius: 50%;
-  overflow: hidden;
-
-  /* Dark center matching portfolio */
-  background: #070b18;
-
-  /* Neon cyan ring */
-  border: 3px solid #16d9ff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  z-index: 10;
-
-  /* Integrated neon glow */
-  box-shadow:
-    0 0 8px rgba(22, 217, 255, 0.8),
-    0 0 20px rgba(22, 217, 255, 0.4),
-    0 0 35px rgba(22, 217, 255, 0.15);
-
-  transition: all 0.3s ease;
-}
-
-.education-logo:hover {
-  transform: scale(1.06);
-
-  box-shadow:
-    0 0 12px rgba(22, 217, 255, 0.95),
-    0 0 28px rgba(22, 217, 255, 0.5),
-    0 0 45px rgba(22, 217, 255, 0.2);
-}
-
-.education-logo img {
-  width: 68px !important;
-  height: 68px !important;
-
-  max-width: 100%;
-
-  object-fit: contain;
-
-  border-radius: 50%;
-
-  padding: 3px;
-}
-
-.education-logo img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100%;
-  object-fit: contain;
-  padding: 4px;
-}
-/* =========================================
-   LOGO POSITIONING
-========================================= */
-
-/* CBIT — card → logo → timeline */
-.education-left .education-logo {
-  right: -39px;
-}
-
-/* Vidya Jyothi — timeline → logo → card */
-.education-right .education-logo {
-  left: -39px;
-}
-/* =========================================
-   SUBJECT TAGS
-========================================= */
-
-.education-tags {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 9px;
-
-  margin-top: 28px;
-}
-
-.education-tags span {
-  padding: 8px 13px;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  border-radius: 999px;
-
-  color: #727a91;
-
-  font-size: 12px;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-  .education-section {
-    padding: 100px 16px 80px;
-  }
-
-  .education-heading {
-    margin-bottom: 60px;
-  }
-
-  .education-heading h2 {
-    font-size: 48px;
-  }
-
-  .education-timeline {
-    padding-left: 28px;
-  }
-
-  /* MOVE LINE TO LEFT */
-
-  .education-timeline::before {
-    left: 9px;
-
-    transform: none;
-  }
-
-  /* SINGLE COLUMN */
-
-  .education-item,
-  .education-left,
-  .education-right {
-    width: 100%;
-
-    margin-left: 0;
-
-    padding-left: 32px;
-    padding-right: 0;
-
-    justify-content: flex-start;
-
-    margin-bottom: 50px;
-  }
-
-  /* MOBILE DOT */
-
-  .education-left .education-dot,
-  .education-right .education-dot {
-    left: -2px;
-    right: auto;
-  }
-
-  /* CARD */
-
-  .education-card {
-    width: 100%;
-
-    padding: 28px 22px;
-
-    border-radius: 16px;
-  }
-
-  .education-left .education-card::after,
-  .education-right .education-card::before {
-    display: none;
-  }
-
-  .education-card h3 {
-    font-size: 25px;
-  }
-
-  .education-institute {
-    font-size: 15px;
-  }
-
-  .education-year {
-    font-size: 15px;
-  }
-
-}
-
-/* =========================================
-   EDUCATION - CLEAN PROFESSIONAL DESIGN
-========================================= */
-
-.education-section {
-  padding: 100px 6vw 50px;
-  position: relative;
-}
-
-/* Education heading */
-
-.education-section .section-heading {
-  text-align: center;
-  margin-bottom: 90px;
-}
-
-.education-section .section-heading h2 {
-  font-size: clamp(52px, 6vw, 82px);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  margin: 20px 0 0;
-}
-
-.education-section .section-heading h2 span {
-  background: linear-gradient(
-    90deg,
-    #4eead4,
-    #4caeff,
-    #9b7cff
-  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3616,12 +3160,10 @@ padding: 34px;
 
 .education-timeline {
   position: relative;
-  max-width: 1200px;
+  width: min(1200px, 100%);
   margin: 0 auto;
   padding: 20px 0;
 }
-
-/* Center line */
 
 .education-timeline::before {
   content: "";
@@ -3640,12 +3182,24 @@ padding: 34px;
   opacity: 0.8;
 }
 
-/* Each education item */
+/* Education items */
 
 .education-item {
   position: relative;
   width: 50%;
+  margin-bottom: 110px;
   padding: 0 55px 60px;
+}
+
+.education-left {
+  justify-content: flex-end;
+  padding-right: 55px;
+}
+
+.education-right {
+  margin-left: 50%;
+  justify-content: flex-start;
+  padding-left: 55px;
 }
 
 .education-item:nth-child(odd) {
@@ -3654,7 +3208,7 @@ padding: 34px;
 }
 
 .education-item:nth-child(even) {
-  left: 0%;
+  left: 0;
   text-align: left;
 }
 
@@ -3683,21 +3237,51 @@ padding: 34px;
   left: -9px;
 }
 
-/* Card */
+/* Education card — identical visual treatment for both cards */
 
 .education-card {
   position: relative;
+  width: 100%;
   padding: 38px 42px;
   border: 1px solid rgba(130, 140, 180, 0.25);
   border-radius: 22px;
   background: rgba(10, 12, 24, 0.75);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .education-card:hover {
   transform: translateY(-5px);
   border-color: rgba(70, 220, 240, 0.55);
+}
+
+/* Card arrows */
+
+.education-left .education-card::after {
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: 27px;
+  width: 20px;
+  height: 20px;
+  background: #101220;
+  border-top: 1px solid rgba(85, 230, 209, 0.5);
+  border-right: 1px solid rgba(85, 230, 209, 0.5);
+  transform: rotate(45deg);
+}
+
+.education-right .education-card::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 27px;
+  width: 20px;
+  height: 20px;
+  background: #101220;
+  border-left: 1px solid rgba(85, 230, 209, 0.5);
+  border-bottom: 1px solid rgba(85, 230, 209, 0.5);
+  transform: rotate(45deg);
 }
 
 /* Badge */
@@ -3714,9 +3298,7 @@ padding: 34px;
   letter-spacing: 0.08em;
 }
 
-/* MAIN DEGREE TITLE
-   THIS IS THE IMPORTANT FIX
-*/
+/* Title */
 
 .education-card h3 {
   font-size: clamp(24px, 2vw, 32px);
@@ -3727,7 +3309,7 @@ padding: 34px;
   color: #f4f5f8;
 }
 
-/* College name */
+/* Institute */
 
 .education-institute {
   font-size: 18px;
@@ -3745,6 +3327,55 @@ padding: 34px;
   margin-bottom: 28px;
 }
 
+/* Education logos */
+
+.education-logo {
+  position: absolute;
+  top: 42px;
+  width: 78px !important;
+  height: 78px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #070b18;
+  border: 3px solid #16d9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow:
+    0 0 8px rgba(22, 217, 255, 0.8),
+    0 0 20px rgba(22, 217, 255, 0.4),
+    0 0 35px rgba(22, 217, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.education-logo:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 0 12px rgba(22, 217, 255, 0.95),
+    0 0 28px rgba(22, 217, 255, 0.5),
+    0 0 45px rgba(22, 217, 255, 0.2);
+}
+
+.education-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* Logo positioning */
+
+.education-left .education-logo {
+  right: -39px;
+}
+
+.education-right .education-logo {
+  left: -39px;
+}
+
 /* Subject tags */
 
 .education-tags {
@@ -3757,7 +3388,8 @@ padding: 34px;
   justify-content: flex-end;
 }
 
-.education-tag {
+.education-tag,
+.education-tags span {
   padding: 8px 14px;
   border: 1px solid rgba(150, 160, 190, 0.28);
   border-radius: 30px;
@@ -3765,9 +3397,7 @@ padding: 34px;
   font-size: 13px;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+/* Mobile */
 
 @media (max-width: 768px) {
 
@@ -3775,27 +3405,17 @@ padding: 34px;
     padding: 90px 20px 100px;
   }
 
-  .education-section .section-heading {
+  .education-heading {
     margin-bottom: 60px;
   }
 
-  .education-section .section-heading h2 {
+  .education-heading h2 {
     font-size: 48px;
   }
-.education-logo {
-  width: 52px;
-  height: 52px;
-  top: 25px;
-  left: -10px !important;
-  right: auto !important;
-  right: auto !important;
-  border-width: 2px;
-}
 
-.education-logo img {
-  padding: 3px;
-}
-  /* Move timeline to left */
+  .education-timeline {
+    padding-left: 28px;
+  }
 
   .education-timeline::before {
     left: 16px;
@@ -3804,14 +3424,17 @@ padding: 34px;
 
   .education-item,
   .education-item:nth-child(odd),
-  .education-item:nth-child(even) {
+  .education-item:nth-child(even),
+  .education-left,
+  .education-right {
     width: 100%;
     left: 0;
+    margin-left: 0;
     text-align: left;
     padding: 0 0 55px 45px;
+    justify-content: flex-start;
+    margin-bottom: 50px;
   }
-
-  /* Dot */
 
   .education-item:nth-child(odd)::before,
   .education-item:nth-child(even)::before {
@@ -3820,11 +3443,28 @@ padding: 34px;
     top: 32px;
   }
 
-  /* Cards */
+  .education-logo {
+    width: 52px;
+    height: 52px;
+    top: 25px;
+    left: -10px !important;
+    right: auto !important;
+    border-width: 2px;
+  }
+
+  .education-logo img {
+    padding: 3px;
+  }
 
   .education-card {
+    width: 100%;
     padding: 28px 24px;
     border-radius: 18px;
+  }
+
+  .education-left .education-card::after,
+  .education-right .education-card::before {
+    display: none;
   }
 
   .education-card h3 {
@@ -3844,7 +3484,8 @@ padding: 34px;
     justify-content: flex-start;
   }
 
-  .education-tag {
+  .education-tag,
+  .education-tags span {
     font-size: 12px;
     padding: 7px 11px;
   }
@@ -3852,7 +3493,8 @@ padding: 34px;
   .education-timeline .education-item:last-child {
     margin-bottom: 0;
   }
-} 
+
+}
 
 /* =========================================
    WORK / PROJECTS SECTION
@@ -6070,6 +5712,7 @@ padding: 34px;
 
   .education-card {
     width: min(480px, 100%);
+    min-height: 0;
     padding: 28px 32px;
     border-radius: 18px;
 
@@ -6854,4 +6497,1188 @@ padding: 34px;
   font-family: Arial, sans-serif !important;
   display: inline-block !important;
   transform: translateY(-1px);
+}
+
+.about-grid .eyebrow {
+  font-size: 12px !important;
+}
+
+@media (min-width: 769px) {
+  .education-section > .section-number {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+/* =========================================================
+   EXPERIENCE — SECTION NUMBER + DIVIDER ALIGNMENT
+   Desktop only — no changes inside the experience card
+   ========================================================= */
+
+@media (min-width: 769px) {
+  .experience-section > .section-number {
+    transform: translateX(-20px);
+    position: relative;
+  }
+
+  .experience-section > .section-number::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 18px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* PROJECTS — DESKTOP POSITION */
+@media (min-width: 769px) {
+  #work {
+    padding-top: 35px !important;
+  }
+}
+/* SKILLS — MATCH PROJECTS DIVIDER */
+
+#skills > .section-divider {
+  display: block !important;
+  width: calc(100% - 20vw) !important;
+  max-width: 1520px !important;
+  height: 1px !important;
+  margin: 30px auto 0 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* =========================================
+   CONTACT — DIVIDER UNDER 06 / CONTACT
+========================================= */
+
+#contact > .section-divider {
+  display: block !important;
+  width: calc(100% - 20vw) !important;
+  max-width: 1520px !important;
+  height: 1px !important;
+  margin: 30px auto 0 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+/* =========================================
+   CONTACT — MATCH OTHER SECTION STRUCTURE
+========================================= */
+
+@media (min-width: 769px) {
+
+  /* Section number */
+  .contact-section > .section-number {
+    width: calc(100% - 12vw) !important;
+    max-width: 1520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left !important;
+    position: relative !important;
+  }
+
+  /* Divider directly under 06 / CONTACT */
+  .contact-section > .section-number::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin-top: 30px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* GET IN TOUCH */
+  .contact-section .eyebrow {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    margin-top: 34px !important;
+    margin-bottom: 28px !important;
+    text-align: center !important;
+  }
+
+  /* Real cyan lines */
+  .contact-section .eyebrow span {
+    display: block !important;
+    width: 68px !important;
+    height: 1px !important;
+    flex-shrink: 0 !important;
+    background: rgba(85, 230, 209, 0.45) !important;
+  }
+
+  /* Kill old pseudo-dashes */
+  .contact-section .eyebrow::before,
+  .contact-section .eyebrow::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* EXPERIENCE — GRADIENT HIGHLIGHT */
+
+.experience-heading h2 span {
+  background: linear-gradient(
+    90deg,
+    #35c8ff,
+    #8f6cff
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+/* =========================================================
+   FINAL MOBILE PASS — 2026
+   Desktop untouched. Mobile-only visual system.
+   Built from the latest mobile screenshots.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------------------------------------------------------
+     GLOBAL MOBILE FRAME
+  --------------------------------------------------------- */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .site {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  /* Keep every main section on the same horizontal grid. */
+  .section,
+  .education-section,
+  .experience-section,
+  .work-section,
+  .skills-section,
+  .contact-section {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* ---------------------------------------------------------
+     NAVBAR
+  --------------------------------------------------------- */
+  .navbar-wrap {
+    width: 100%;
+    margin: 10px 0 0 !important;
+    padding: 0 9px !important;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 80px !important;
+    min-height: 80px !important;
+    padding: 0 14px !important;
+    border-radius: 17px !important;
+    grid-template-columns: 1fr auto !important;
+  }
+
+  .logo {
+    gap: 10px !important;
+    font-size: 21px !important;
+    line-height: 1 !important;
+  }
+
+  .navbar-profile {
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    object-position: center 20% !important;
+  }
+
+  .logo-name {
+    gap: 5px !important;
+    font-size: 21px !important;
+  }
+
+  .github-button,
+  .navbar .nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: flex !important;
+    width: 38px !important;
+    height: 38px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .mobile-nav.open {
+    top: 88px !important;
+    left: 9px !important;
+    right: 9px !important;
+    border-radius: 15px !important;
+    padding: 8px !important;
+  }
+
+  .mobile-nav a {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* ---------------------------------------------------------
+     HERO
+  --------------------------------------------------------- */
+  .hero {
+    width: 100%;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 22px 9px 0 !important;
+  }
+
+  .availability {
+    font-size: 9px !important;
+    letter-spacing: 1.1px !important;
+    padding: 9px 11px !important;
+    gap: 8px !important;
+  }
+
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+    margin-top: 24px !important;
+  }
+
+  .hero-left {
+    width: 100% !important;
+  }
+
+  .hello {
+    margin: 0 0 8px !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero h1,
+  .hero-left h1 {
+    width: 100% !important;
+    font-size: clamp(42px, 12.2vw, 50px) !important;
+    line-height: 0.94 !important;
+    letter-spacing: -3px !important;
+    white-space: nowrap !important;
+  }
+
+  .role {
+    margin-top: 17px !important;
+    gap: 12px !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+  }
+
+  .role-line {
+    width: 25px !important;
+    height: 2px !important;
+    flex-shrink: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-description {
+    width: 100% !important;
+    max-width: 365px !important;
+    margin: 21px 0 0 !important;
+    font-size: 11px !important;
+    line-height: 1.75 !important;
+  }
+
+  .hero-buttons {
+    width: 100% !important;
+    margin-top: 21px !important;
+    gap: 8px !important;
+  }
+
+  .hero-buttons a {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 14px 18px !important;
+    font-size: 11px !important;
+    gap: 18px !important;
+    border-radius: 9px !important;
+  }
+
+  .social-links {
+    width: 100% !important;
+    margin-top: 18px !important;
+    gap: 18px !important;
+    font-size: 11px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .social-links a {
+    min-height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .social-links > span {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 32px !important;
+  }
+
+  /* ---------------------------------------------------------
+     HERO MIND MAP
+     Keep the desktop visual language, but make it breathe on
+     the narrow viewport instead of pushing the next section.
+  --------------------------------------------------------- */
+  .mindmap {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 385px !important;
+    margin: 3px auto 0 !important;
+    transform: scale(0.80) !important;
+    transform-origin: center center !important;
+  }
+
+  .orbit-1 {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .orbit-2 {
+    width: 320px !important;
+    height: 320px !important;
+  }
+
+  .orbit-3 {
+    width: 410px !important;
+    height: 410px !important;
+  }
+
+  .brain-core {
+    width: 185px !important;
+    height: 185px !important;
+  }
+
+  .brain {
+    width: 78px !important;
+    height: 78px !important;
+  }
+
+  .brain-core .brain-title {
+    font-size: 18px !important;
+  }
+
+  .brain-subtitle {
+    font-size: 6px !important;
+    letter-spacing: 2.7px !important;
+    bottom: 23px !important;
+  }
+
+  .skill-node {
+    min-width: 100px !important;
+    padding: 9px 11px !important;
+    gap: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .skill-node strong {
+    font-size: 8px !important;
+  }
+
+  .skill-node small {
+    font-size: 5px !important;
+  }
+
+  .scroll-indicator {
+    bottom: 7px !important;
+    gap: 12px !important;
+    font-size: 8px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .scroll-indicator span,
+  .scroll-indicator::before {
+    width: 38px !important;
+  }
+
+  /* ---------------------------------------------------------
+     COMMON SECTION NUMBERS + DIVIDERS
+  --------------------------------------------------------- */
+  .section-number {
+    font-size: 9px !important;
+    letter-spacing: 2.5px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 18px !important;
+  }
+
+  .section-divider {
+    width: 100% !important;
+    height: 1px !important;
+    margin: 0 !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  /* ---------------------------------------------------------
+     ABOUT
+  --------------------------------------------------------- */
+  #about {
+    padding: 76px 24px 78px !important;
+  }
+
+  #about > .section-number {
+    margin-bottom: 17px !important;
+  }
+
+  #about .about-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 42px !important;
+    padding-top: 42px !important;
+  }
+
+  #about .eyebrow,
+  .about-grid .eyebrow {
+    margin: 0 0 20px !important;
+    font-size: 11px !important;
+    letter-spacing: 4px !important;
+    line-height: 1.2 !important;
+  }
+
+  #about .about-grid h2 {
+    margin: 0 !important;
+    font-size: clamp(47px, 12.8vw, 57px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -4px !important;
+  }
+
+  #about .about-text {
+    padding-top: 0 !important;
+  }
+
+  #about .about-text p {
+    margin: 0 0 28px !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+
+  #about .about-text p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* ---------------------------------------------------------
+     EDUCATION
+  --------------------------------------------------------- */
+  #education {
+    padding: 74px 20px 64px !important;
+  }
+
+  #education > .section-number {
+    margin-bottom: 17px !important;
+  }
+
+  #education .section-divider {
+    margin-bottom: 0 !important;
+  }
+
+  .education-heading {
+    width: 100% !important;
+    margin: 39px 0 47px !important;
+    text-align: center !important;
+  }
+
+  .education-heading h2 {
+    font-size: clamp(43px, 12vw, 51px) !important;
+    line-height: 1 !important;
+    letter-spacing: -3px !important;
+  }
+
+  .education-timeline {
+    width: 100% !important;
+    padding: 16px 0 0 27px !important;
+  }
+
+  .education-timeline::before {
+    left: 10px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    transform: none !important;
+  }
+
+  .education-item,
+  .education-item:nth-child(odd),
+  .education-item:nth-child(even),
+  .education-left,
+  .education-right {
+    width: 100% !important;
+    left: 0 !important;
+    margin: 0 0 58px !important;
+    padding: 0 0 0 42px !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  .education-item:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .education-item::before,
+  .education-item:nth-child(odd)::before,
+  .education-item:nth-child(even)::before {
+    left: 1px !important;
+    right: auto !important;
+    top: 25px !important;
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .education-logo,
+  .education-left .education-logo,
+  .education-right .education-logo {
+    width: 52px !important;
+    height: 52px !important;
+    top: 0 !important;
+    left: -17px !important;
+    right: auto !important;
+    border-width: 2px !important;
+    z-index: 5 !important;
+  }
+
+  .education-card {
+    width: 100% !important;
+    padding: 27px 22px !important;
+    border-radius: 18px !important;
+    box-sizing: border-box !important;
+  }
+
+  .education-badge {
+    padding: 8px 15px !important;
+    margin-bottom: 20px !important;
+    font-size: 11px !important;
+  }
+
+  .education-card h3 {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.035em !important;
+    margin-bottom: 17px !important;
+  }
+
+  .education-institute {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .education-year {
+    font-size: 15px !important;
+    margin-top: 17px !important;
+  }
+
+  .education-tags {
+    gap: 8px !important;
+    margin-top: 19px !important;
+  }
+
+  .education-tags span {
+    font-size: 10px !important;
+    padding: 7px 10px !important;
+  }
+
+  .education-left .education-card::after,
+  .education-right .education-card::before {
+    display: none !important;
+  }
+
+  /* ---------------------------------------------------------
+     EXPERIENCE
+     This is the main source of the oversized gap in the current
+     mobile screenshot, so the section is deliberately tightened.
+  --------------------------------------------------------- */
+  #experience {
+    padding: 70px 21px 72px !important;
+  }
+
+  #experience > .section-number {
+    margin-bottom: 18px !important;
+    transform: none !important;
+  }
+
+  #experience > .section-number::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin-top: 18px !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .experience-heading {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 34px 0 43px !important;
+    text-align: left !important;
+  }
+
+  .experience-heading h2 {
+    margin: 0 !important;
+    font-size: clamp(42px, 11.5vw, 53px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -3px !important;
+    text-align: left !important;
+  }
+
+  .experience-list {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    gap: 18px !important;
+  }
+
+  .experience-card {
+    width: 100% !important;
+    padding: 29px 27px !important;
+    border-radius: 20px !important;
+  }
+
+  .experience-number {
+    font-size: 13px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .experience-category {
+    padding: 8px 14px !important;
+    margin-bottom: 17px !important;
+    font-size: 10px !important;
+  }
+
+  .experience-card h3 {
+    font-size: 30px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1.4px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .experience-company {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .experience-date {
+    font-size: 14px !important;
+    margin-top: 12px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .experience-points {
+    padding-left: 18px !important;
+    margin-top: 0 !important;
+  }
+
+  .experience-points li {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 13px !important;
+  }
+
+  .experience-tags {
+    gap: 7px !important;
+    margin-top: 20px !important;
+  }
+
+  .experience-tags span {
+    font-size: 10px !important;
+    padding: 7px 10px !important;
+  }
+
+  /* ---------------------------------------------------------
+     PROJECTS
+     Preserve the approved side-by-side mobile visual layout.
+  --------------------------------------------------------- */
+  #work {
+    padding: 70px 20px 72px !important;
+  }
+
+  #work > .section-number {
+    margin-bottom: 17px !important;
+  }
+
+  #work .section-divider {
+    margin-bottom: 0 !important;
+  }
+
+  #work .section-heading {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 37px 0 42px !important;
+    text-align: center !important;
+  }
+
+  #work .section-heading h2 {
+    font-size: clamp(43px, 11.8vw, 54px) !important;
+    line-height: 1 !important;
+    letter-spacing: -3px !important;
+    text-align: center !important;
+  }
+
+  .projects {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  .project-card {
+    min-height: 430px !important;
+    padding: 28px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .project-card .project-category,
+  .project-card h3,
+  .project-card .project-description,
+  .project-card .tags,
+  .project-card .project-link,
+  .project-card .building-badge {
+    width: 52% !important;
+    max-width: 52% !important;
+  }
+
+  .project-card h3 {
+    font-size: 31px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -1.7px !important;
+  }
+
+  .project-description {
+    font-size: 10px !important;
+    line-height: 1.65 !important;
+  }
+
+  .project-card .project-visual,
+  .project-card .rag-visual {
+    position: absolute !important;
+    top: 50% !important;
+    right: 16px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 40% !important;
+    height: 220px !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 2 !important;
+  }
+
+  .project-card .rag-center {
+    width: 48px !important;
+    height: 48px !important;
+    transform: none !important;
+  }
+
+  .project-card .hand-tracking-svg {
+    width: 78px !important;
+  }
+
+  .project-card .hand-label,
+  .project-card .rag-label {
+    font-size: 5px !important;
+    letter-spacing: 2px !important;
+  }
+
+  /* ---------------------------------------------------------
+     SKILLS
+     Four columns at normal phone widths; three on very small
+     phones so the labels never become cramped.
+  --------------------------------------------------------- */
+  #skills {
+    padding: 67px 18px 62px !important;
+  }
+
+  #skills > .section-number {
+    margin-bottom: 17px !important;
+  }
+
+  #skills > .section-divider {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .skills-heading {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 36px 0 40px !important;
+    text-align: center !important;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(41px, 11vw, 47px) !important;
+    line-height: 1 !important;
+    letter-spacing: -3px !important;
+  }
+
+  .skills-category-title {
+    gap: 14px !important;
+    margin-bottom: 29px !important;
+    font-size: 9px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .skills-category-title span {
+    width: 42px !important;
+  }
+
+  .skills-icons-grid {
+    width: 100% !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    column-gap: 8px !important;
+    row-gap: 31px !important;
+  }
+
+  .skill-icon-item {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .skill-icon-circle {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .skill-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .skill-icon-glow {
+    width: 38px !important;
+    height: 7px !important;
+    margin-top: 10px !important;
+  }
+
+  .skill-icon-item p {
+    max-width: 82px !important;
+    margin: 8px auto 0 !important;
+    font-size: 8px !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+  }
+
+  .skills-icons-grid .skill-icon-item:nth-child(7),
+  .skills-icons-grid .skill-icon-item:nth-child(8) {
+    grid-column: auto !important;
+  }
+
+  .logic-category {
+    margin-top: 63px !important;
+  }
+
+  /* ---------------------------------------------------------
+     CONTACT
+  --------------------------------------------------------- */
+  #contact {
+    padding: 67px 18px 55px !important;
+  }
+
+  #contact > .section-number {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 17px !important;
+    text-align: left !important;
+  }
+
+  #contact > .section-number::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin-top: 18px !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .contact-section .eyebrow {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 30px 0 25px !important;
+    font-size: 10px !important;
+    letter-spacing: 4px !important;
+    line-height: 1.2 !important;
+  }
+
+  .contact-section .eyebrow span {
+    display: block !important;
+    width: 40px !important;
+    height: 1px !important;
+    flex-shrink: 0 !important;
+    background: rgba(85,230,209,0.45) !important;
+  }
+
+  .contact-section .eyebrow::before,
+  .contact-section .eyebrow::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .contact-section h2 {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    font-size: clamp(37px, 10.4vw, 43px) !important;
+    line-height: 1 !important;
+    letter-spacing: -2.5px !important;
+  }
+
+  .contact-description {
+    max-width: 320px !important;
+    margin: 25px auto !important;
+    font-size: 11px !important;
+    line-height: 1.7 !important;
+  }
+
+  .contact-button {
+    width: min(280px, 100%) !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    padding: 0 20px !important;
+    font-size: 15px !important;
+    border-radius: 999px !important;
+  }
+
+  .contact-links {
+    width: 100% !important;
+    gap: 18px !important;
+    margin-top: 28px !important;
+    font-size: 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .contact-links a {
+    min-height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .social-arrow {
+    font-size: 10px !important;
+    margin-left: 3px !important;
+  }
+
+  /* ---------------------------------------------------------
+     FOOTER
+  --------------------------------------------------------- */
+  .footer {
+    width: 100% !important;
+    padding: 24px 15px 31px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center !important;
+    font-size: 8px !important;
+  }
+
+  .footer div {
+    font-size: 13px !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES — 320–379px
+   ========================================================= */
+@media (max-width: 379px) {
+
+  .navbar {
+    height: 74px !important;
+    min-height: 74px !important;
+  }
+
+  .logo-name {
+    font-size: 19px !important;
+  }
+
+  .navbar-profile {
+    width: 38px !important;
+    height: 38px !important;
+    flex-basis: 38px !important;
+  }
+
+  .hero h1,
+  .hero-left h1 {
+    font-size: 41px !important;
+    letter-spacing: -2.5px !important;
+  }
+
+  .hero-description {
+    font-size: 10px !important;
+  }
+
+  .mindmap {
+    height: 360px !important;
+    transform: scale(0.72) !important;
+  }
+
+  #about .about-grid h2 {
+    font-size: 44px !important;
+  }
+
+  #about .about-text p {
+    font-size: 14px !important;
+  }
+
+  .education-heading h2,
+  #work .section-heading h2,
+  .skills-heading h2 {
+    font-size: 40px !important;
+  }
+
+  .skills-icons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    column-gap: 6px !important;
+  }
+
+  .skill-icon-circle {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .skill-icon {
+    width: 31px !important;
+    height: 31px !important;
+  }
+
+  .experience-heading h2 {
+    font-size: 40px !important;
+  }
+
+  .experience-card h3 {
+    font-size: 27px !important;
+  }
+
+  .contact-section h2 {
+    font-size: 36px !important;
+  }
+
+  .contact-button {
+    width: 100% !important;
+    max-width: 270px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE — TIGHTER SECTION-TO-SECTION RHYTHM ONLY
+   No typography, cards, visuals, or component geometry changed.
+   Desktop untouched.
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* HERO → ABOUT: keep the hero visual, reduce only the
+     breathing space before the first content section. */
+  #about {
+    padding-top: 52px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* ABOUT → EDUCATION */
+  #education {
+    padding-top: 50px !important;
+    padding-bottom: 46px !important;
+  }
+
+  /* EDUCATION → EXPERIENCE */
+  #experience {
+    padding-top: 48px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* EXPERIENCE → PROJECTS */
+  #work {
+    padding-top: 48px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* PROJECTS → SKILLS */
+  #skills {
+    padding-top: 46px !important;
+    padding-bottom: 44px !important;
+  }
+
+  /* SKILLS → CONTACT */
+  #contact {
+    padding-top: 46px !important;
+    padding-bottom: 42px !important;
+  }
+
+  /* Keep the footer close to Contact without touching its design. */
+  .footer {
+    padding-top: 20px !important;
+    padding-bottom: 27px !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES — same tighter rhythm
+   ========================================================= */
+@media (max-width: 379px) {
+  #about {
+    padding-top: 48px !important;
+    padding-bottom: 46px !important;
+  }
+
+  #education {
+    padding-top: 46px !important;
+    padding-bottom: 42px !important;
+  }
+
+  #experience {
+    padding-top: 44px !important;
+    padding-bottom: 46px !important;
+  }
+
+  #work {
+    padding-top: 44px !important;
+    padding-bottom: 46px !important;
+  }
+
+  #skills {
+    padding-top: 42px !important;
+    padding-bottom: 40px !important;
+  }
+
+  #contact {
+    padding-top: 42px !important;
+    padding-bottom: 38px !important;
+  }
+}
+
+/* =========================================
+   MOBILE CONTACT BUTTON — COMPACT
+========================================= */
+
+@media (max-width: 650px) {
+  .contact-button {
+    width: 240px !important;
+    max-width: 240px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+
+    padding: 0 18px !important;
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+
+    border-radius: 999px !important;
+  }
 }
